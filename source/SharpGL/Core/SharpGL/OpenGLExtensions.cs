@@ -5410,9 +5410,9 @@ namespace SharpGL
         /// <param name="program">The name of a program object whose resources to query.</param>
         /// <param name="programInterface">A token identifying the interface within program​ containing the resource named name​.</param>
         /// <param name="name">The name of the resource to query the index of.</param>
-        public void GetProgramResourceIndex(uint program, uint programInterface, string name)
+        public int GetProgramResourceIndex(uint program, uint programInterface, string name)
         {
-            GetDelegateFor<glGetProgramResourceIndex>()(program, programInterface, name);
+            return (int)GetDelegateFor<glGetProgramResourceIndex>()(program, programInterface, name);
         }
 
         /// <summary>
@@ -5515,6 +5515,7 @@ namespace SharpGL
         public const uint GL_MAX_SHADER_STORAGE_BUFFER_BINDINGS            = 0x90DD;
         public const uint GL_MAX_SHADER_STORAGE_BLOCK_SIZE                 = 0x90DE;
         public const uint GL_SHADER_STORAGE_BUFFER_OFFSET_ALIGNMENT        = 0x90DF;
+        public const uint GL_SHADER_STORAGE_BLOCK                          = 0x92E6;
         public const uint GL_SHADER_STORAGE_BARRIER_BIT                    = 0x2000;       
         public const uint GL_MAX_COMBINED_SHADER_OUTPUT_RESOURCES          = 0x8F39;
 
